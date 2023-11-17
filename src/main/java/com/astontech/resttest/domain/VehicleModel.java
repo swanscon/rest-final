@@ -20,11 +20,11 @@ public class VehicleModel {
     @Column(nullable = false)
     private String vehicleModelName;
 
-//    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "vehicleMakeId")
-//    private VehicleMake vehicleMake;
+    private String vehicleModelImage;
 
-    private Integer vehicleMakeId;
+    @ManyToOne
+    @JoinColumn(name = "vehicleMakeId", referencedColumnName = "id")
+    private VehicleMake vehicleMake;
 
     public Integer getId() {
         return id;
@@ -42,18 +42,27 @@ public class VehicleModel {
         this.vehicleModelName = vehicleModelName;
     }
 
-    public Integer getVehicleMakeId() {
-        return vehicleMakeId;
+    public String getVehicleModelImage() {
+        return vehicleModelImage;
     }
 
-    public void setVehicleMakeId(Integer vehicleMakeId) {
-        this.vehicleMakeId = vehicleMakeId;
+    public void setVehicleModelImage(String vehicleModelImage) {
+        this.vehicleModelImage = vehicleModelImage;
+    }
+
+    public VehicleMake getVehicleMake() {
+        return vehicleMake;
+    }
+
+    public void setVehicleMake(VehicleMake vehicleMake) {
+        this.vehicleMake = vehicleMake;
     }
 
     public VehicleModel() {}
 
-    public VehicleModel(String vehicleModelName, Integer vehicleMakeId) {
+    public VehicleModel(String vehicleModelName, String vehicleModelImage, VehicleMake vehicleMake) {
         this.vehicleModelName = vehicleModelName;
-        this.vehicleMakeId = vehicleMakeId;
+        this.vehicleModelImage = vehicleModelImage;
+        this.vehicleMake = vehicleMake;
     }
 }

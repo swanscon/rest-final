@@ -13,13 +13,10 @@ public class VehicleMake {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @Column(name = "make_id")
     private Integer id;
 
     @Column(nullable = false)
     private String vehicleMakeName;
-
-    @OneToMany
 
     public Integer getId() {
         return id;

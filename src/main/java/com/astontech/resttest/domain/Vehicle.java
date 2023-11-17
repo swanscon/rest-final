@@ -24,7 +24,9 @@ public class Vehicle implements Serializable {
     private String vehicleYear;
     private String vehicleColor;
 
-    private Integer vehicleModelId;
+    @ManyToOne
+    @JoinColumn(name = "vehicleModelId", referencedColumnName = "id")
+    private VehicleModel vehicleModel;
 
     public Integer getId() {
         return id;
@@ -66,21 +68,21 @@ public class Vehicle implements Serializable {
         this.vehicleColor = vehicleColor;
     }
 
-    public Integer getVehicleModelId() {
-        return vehicleModelId;
+    public VehicleModel getVehicleModel() {
+        return vehicleModel;
     }
 
-    public void setVehicleModelId(Integer vehicleModelId) {
-        this.vehicleModelId = vehicleModelId;
+    public void setVehicleModel(VehicleModel vehicleModel) {
+        this.vehicleModel = vehicleModel;
     }
 
     public Vehicle() {}
 
-    public Vehicle(String vehicleVIN, String vehicleLicense, String vehicleYear, String vehicleColor, Integer vehicleModelId) {
+    public Vehicle(String vehicleVIN, String vehicleLicense, String vehicleYear, String vehicleColor, VehicleModel vehicleModel) {
         this.vehicleVIN = vehicleVIN;
         this.vehicleLicense = vehicleLicense;
         this.vehicleYear = vehicleYear;
         this.vehicleColor = vehicleColor;
-        this.vehicleModelId = vehicleModelId;
+        this.vehicleModel = vehicleModel;
     }
 }
