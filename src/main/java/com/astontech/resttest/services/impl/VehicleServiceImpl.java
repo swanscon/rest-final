@@ -42,7 +42,7 @@ public class VehicleServiceImpl implements VehicleService {
 
 
     @Override
-    @Cacheable("vehicleCache")
+//    @Cacheable(value = "vehicleCache")
     public Iterable<Vehicle> findAll() {
         return vehicleRepo.findAll();
     }
