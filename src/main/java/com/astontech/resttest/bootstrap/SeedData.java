@@ -47,7 +47,6 @@ public class SeedData implements CommandLineRunner {
                 VehicleModel f150 = new VehicleModel("F150", "https://www.cars.com/i/large/in/v2/stock_photos/10e38ac5-b363-4a77-93a5-221773b0df83/610d1962-9b07-4e49-b6e1-8e57285703b2.png", ford);
                 VehicleModel camaro = new VehicleModel("Camaro", "https://www.cars.com/i/large/in/v2/stock_photos/c7844db2-928b-4834-83a8-c127c74fe6e1/9e3a3745-da90-41c0-b93c-8c334093142e.png", chevy);
                 VehicleModel corolla = new VehicleModel("Corolla","https://www.cars.com/i/large/in/v2/stock_photos/03879859-63e1-4d93-959b-ce57d8a403b1/0dbd67ec-6d76-4184-82b5-d01fa07f5065.png", toyota);
-                VehicleModel civic = new VehicleModel("Civic", "https://vehicle-images.dealerinspire.com/7ba1-11002297/thumbnails/large/2HGFE1F95RH313305/81dfa81728ce617704723c061a296bfb.png", honda);
                 VehicleModel accord = new VehicleModel("Accord", "https://www.cars.com/i/large/in/v2/stock_photos/e094f543-16b8-48e6-b3af-dfc584634c7a/39ad34ed-1dac-4889-8b0d-5e6e9170773c.png", honda);
                 VehicleModel rav4 = new VehicleModel("RAV4", "https://www.cars.com/i/large/in/v2/stock_photos/4fed3aeb-3ea7-4803-aded-3dc11f2f1bf7/3e51eb95-3c65-4c56-bbc7-0669c76f20ce.png", toyota);
                 VehicleModel series3 = new VehicleModel("3 Series", "https://www.cars.com/i/large/in/v2/stock_photos/b1695a6a-edc7-4c2f-a232-c473da9677fc/c13b3868-e5c7-4c03-b49e-4f563e519800.png", bmw);
@@ -58,7 +57,6 @@ public class SeedData implements CommandLineRunner {
                 vehicleModelRepo.save(f150);
                 vehicleModelRepo.save(camaro);
                 vehicleModelRepo.save(corolla);
-                vehicleModelRepo.save(civic);
                 vehicleModelRepo.save(accord);
                 vehicleModelRepo.save(rav4);
                 vehicleModelRepo.save(series3);
@@ -70,10 +68,9 @@ public class SeedData implements CommandLineRunner {
                     Vehicle vehicle1 = new Vehicle("PZYU65RUJ4AF2SXTB", "I1DBECB", "2022", "Red", f150);
                     Vehicle vehicle2 = new Vehicle("YIW7S7PWKLRCOC148", "KODSX6Y", "2023", "White", camaro);
                     Vehicle vehicle3 = new Vehicle("UBH74G2YCI8567OJO", "3GR9NZD", "2019", "Black", corolla);
-                    Vehicle vehicle4 = new Vehicle("497MDLDQ9KFFFA48V", "G4UCLXE", "2023", "Red", civic);
-                    Vehicle vehicle5 = new Vehicle("6NP14C50R6DW46ZDA", "F0RT3ZP", "2020", "White", accord);
-                    Vehicle vehicle6 = new Vehicle("REQFKG0H9AVUTCGMB", "DLUIBA9", "2018", "Silver", series3);
-                    Vehicle vehicle7 = new Vehicle("3S8CNLOEFT5CGGJTK", "UQ4O2WE", "2021", "Black", cClass);
+                    Vehicle vehicle4 = new Vehicle("6NP14C50R6DW46ZDA", "F0RT3ZP", "2020", "White", accord);
+                    Vehicle vehicle5 = new Vehicle("REQFKG0H9AVUTCGMB", "DLUIBA9", "2018", "Silver", series3);
+                    Vehicle vehicle6 = new Vehicle("3S8CNLOEFT5CGGJTK", "UQ4O2WE", "2021", "Black", cClass);
 
                     vehicleRepo.save(vehicle1);
                     vehicleRepo.save(vehicle2);
@@ -81,7 +78,6 @@ public class SeedData implements CommandLineRunner {
                     vehicleRepo.save(vehicle4);
                     vehicleRepo.save(vehicle5);
                     vehicleRepo.save(vehicle6);
-                    vehicleRepo.save(vehicle7);
 
                 }
             }
